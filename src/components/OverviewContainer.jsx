@@ -11,7 +11,7 @@ const convertNumberToK = (number) => {
 
 export const OverviewContainer = () => {
     return (
-        <section className=" absolute top-[191px] left-0 right-0">
+        <section className=" absolute top-[191px] left-0 right-0 max-w-[1440px] flex flex-wrap gap-[30px] place-content-center">
             {
                 data.overview.map(object =>
                     <OverviewCard
@@ -30,7 +30,9 @@ export const OverviewContainer = () => {
 
 export const OverviewTodayContainer = () => {
     return (
-        <div>
+        <section>
+            <h2 className=" text-2xl font-bold mb-[27px] text-Dark-Grayish-Blue ml-8">Overview Today</h2>
+            <div className=" flex flex-wrap ">
             {
                 data["overview-today"].map(object =>
                     <OverviewTodayCard
@@ -43,5 +45,7 @@ export const OverviewTodayContainer = () => {
                 )
             }
         </div>
+        </section>
+        
     )
 }
