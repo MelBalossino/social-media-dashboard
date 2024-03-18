@@ -32,20 +32,19 @@ export const OverviewTodayContainer = () => {
     return (
         <section>
             <h2 className=" text-2xl font-bold mb-[27px] text-Dark-Grayish-Blue ml-8">Overview Today</h2>
-            <div className=" flex flex-wrap ">
-            {
-                data["overview-today"].map(object =>
-                    <OverviewTodayCard
-                        key={object.id}
-                        network={object.network}
-                        statsType={object.statsType}
-                        stats={convertNumberToK(object.stats)}
-                        porcentage={object.porcentage}
-                        isUp={object.isUp} />
-                )
-            }
-        </div>
+            <div className=" flex flex-wrap">
+                {
+                    data["overview-today"].map(object =>
+                        <OverviewTodayCard
+                            key={object.id}
+                            network={object.network}
+                            statsType={object.statsType}
+                            stats={convertNumberToK(object.stats)}
+                            porcentage={object.porcentage}
+                            isUp={object.isUp} />
+                    )
+                }
+            </div>
         </section>
-        
     )
 }
