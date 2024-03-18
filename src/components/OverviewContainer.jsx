@@ -1,16 +1,15 @@
 import data from "../../data/data.json"
-import OverviewCard from "./OverviewCard"
+import { OverviewCard, OverviewTodayCard } from "./OverviewCard"
 
-const OverviewContainer = () => {
-
-    const convertNumberToK = (number) => {
-        if (number >= 10000) {
-            number = number / 1000
-            return `${number}k`
-        }
-        return number
+const convertNumberToK = (number) => {
+    if (number >= 10000) {
+        number = number / 1000
+        return `${number}k`
     }
+    return number
+}
 
+export const OverviewContainer = () => {
     return (
         <section className=" absolute top-[191px] left-0 right-0">
             {
@@ -29,4 +28,20 @@ const OverviewContainer = () => {
     )
 }
 
-export default OverviewContainer
+export const OverviewTodayContainer = () => {
+    return (
+        <div>
+            {
+                data["overview-today"].map(object =>
+                    <OverviewTodayCard
+                        key={object.id}
+                        network={object.network}
+                        statsType={object.statsType}
+                        stats={convertNumberToK(object.stats)}
+                        porcentage={object.porcentage}
+                        isUp={object.isUp} />
+                )
+            }
+        </div>
+    )
+}
