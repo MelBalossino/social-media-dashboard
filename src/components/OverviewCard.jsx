@@ -28,13 +28,13 @@ export const OverviewCard = ({
     today,
 }) => {
     return (
-        <article className=" bg-Light-Grayish-Blue w-[326px] h-[216px] mb-4 rounded-[5px] mx-auto overflow-hidden text-center dark:bg-Dark-Desaturated-Blue hover:brightness-95 cursor-pointer hover:dark:brightness-125">
-            <div className={`${networkColors[network]} h-[4px] mb-8`}></div>
-            <div className=" flex items-center place-content-center gap-2">
+        <article className=" rounded-[5px] text-center w-[326px] h-[216px] mx-auto bg-Light-Grayish-Blue dark:bg-Dark-Desaturated-Blue mb-4 overflow-hidden cursor-pointer hover:brightness-95 hover:dark:brightness-125 tablet:w-[255px]">
+            <div className={`${networkColors[network]} w-full h-[4px] mb-8`}></div>
+            <div className=" flex items-center place-content-center gap-2 mb-[28px]">
                 <img src={networkLogos[network]} alt={`logo ${network}`} />
                 <p className=" text-xs text-Dark-Grayish-Blue font-bold">{user}</p>
             </div>
-            <p className=" text-[56px] font-bold text-Very-Dark-Blue dark:text-White">{audience}</p>
+            <p className=" text-[56px] font-bold mb-5 text-Very-Dark-Blue dark:text-White">{audience}</p>
             <p className=" uppercase tracking-[5px] text-Dark-Grayish-Blue text-xs mb-6">
                 {audienceType}
             </p>
@@ -54,7 +54,7 @@ export const OverviewCard = ({
 
 export const OverviewTodayCard = ({ network, statsType, stats, porcentage, isUp }) => {
     return (
-        <article className=" bg-Light-Grayish-Blue w-[326px] h-[125px] mb-4 mx-auto rounded-[5px] p-[27px] cursor-pointer hover:brightness-95  dark:bg-Dark-Desaturated-Blue hover:dark:brightness-125">
+        <article className=" bg-Light-Grayish-Blue w-[326px] h-[125px] mb-4 mx-auto rounded-[5px] p-[27px] pr-[31px] pb-[19px] pl-6 cursor-pointer hover:brightness-95  dark:bg-Dark-Desaturated-Blue hover:dark:brightness-125 tablet:w-[255px]">
             <div className=" flex justify-between items-center">
                 <p className=" text-Dark-Grayish-Blue font-bold">{statsType}</p>
                 <img src={networkLogos[network]} alt={`logo ${network}`} />
