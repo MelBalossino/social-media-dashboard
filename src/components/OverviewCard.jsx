@@ -56,14 +56,14 @@ export const OverviewTodayCard = ({ network, statsType, stats, porcentage, isUp 
     return (
         <article className=" bg-Light-Grayish-Blue w-[326px] h-[125px] mb-4 mx-auto rounded-[5px] p-[27px] cursor-pointer hover:brightness-95  dark:bg-Dark-Desaturated-Blue hover:dark:brightness-125">
             <div className=" flex justify-between items-center">
-                <p className=" text-Dark-Grayish-Blue">{statsType}</p>
+                <p className=" text-Dark-Grayish-Blue font-bold">{statsType}</p>
                 <img src={networkLogos[network]} alt={`logo ${network}`} />
             </div>
             <div className=" flex justify-between">
                 <p className=" text-[42px] font-bold text-Very-Dark-Blue dark:text-White">{stats}</p>
                 <div className=" flex items-center place-content-center gap-1">
                     <img src={isUp ? iconUp : iconDown} alt="icon arrow" />
-                    <p className={`text-xs font-bold ${isUp ? "text-Lime-Green" : "text-Bright-Red"}`}>{porcentage} Today</p>
+                    <p className={`text-xs font-bold ${isUp ? "text-Lime-Green" : "text-Bright-Red"}`}>{porcentage}</p>
                 </div>
             </div>
         </article>
