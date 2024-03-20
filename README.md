@@ -5,10 +5,9 @@
 <div align="center">
 <br />
    
-   ![Estado](https://img.shields.io/badge/Estado-COMPLETO-green)
+   ![Estado](https://img.shields.io/badge/Estado:-COMPLETO-green)
 
 </div>
-<br>
 <img src="public\readme\responsive.PNG" alt="" width="1000px" />
 
 ## ☀️ Sobre el proyecto
